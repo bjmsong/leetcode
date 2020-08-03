@@ -5,8 +5,8 @@ Q: 两个栈构造一个队列
 
 class QueueOfStack(object):
     def __init__(self):
-        self.s1 = []  # 栈1
-        self.s2 = []  # 栈2
+        self.s1 = []
+        self.s2 = []
 
     def enqueue(self, val):
         self.s1.append(val)

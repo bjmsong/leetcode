@@ -2,10 +2,8 @@
 Q: 剪绳子
 
 给你一根长度为 n 的绳子，请把绳子剪成整数长度的 m 段（m、n都是整数，n>1并且m>1），每段绳子的长度记为 k[0],k[1]...k[m] 。请问 k[0]*k[1]*...*k[m]
-可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。
-
-测试用例：
-
+可能的最大乘积是多少？
+例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。
 """
 
 
@@ -18,8 +16,6 @@ class Solution:
         不要递归，会大量重复计算
         时间复杂度：O(n^2)
         空间复杂度：O(n)
-        :param n:
-        :return:
         """
         if n < 2:
             return 0
@@ -28,10 +24,8 @@ class Solution:
         if n == 3:
             return 2
         products = [1] * (n + 1)
-        products[0] = 0
-        products[1] = 1
-        products[2] = 2
-        products[3] = 3
+        for i in range(4):
+            products[i] = i
         for i in range(4, n + 1):
             max = 0
             for j in range(1, i // 2 + 1):
@@ -49,8 +43,6 @@ class Solution:
         当n=4,切成2+2比3+1乘积更大
         时间复杂度：O(n)
         空间复杂度：O(1)
-        :param n:
-        :return:
         """
         if n < 2:
             return 0

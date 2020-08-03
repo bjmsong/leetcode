@@ -1,9 +1,5 @@
 """
-Q: 打印从1到最大的n位数
 输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。
-
-测试用例：
-
 """
 
 
@@ -14,13 +10,10 @@ class Solution:
     def printNumber(self, number):
         """
         舍弃左边的0
-        :param number:
-        :return:
         """
         is_begining = True
-        length = len(number)
         valid_number = []
-        for i in range(length):
+        for i in range(len(number)):
             if is_begining and number[i] != '0':
                 is_begining = False
             if not is_begining:
@@ -46,8 +39,6 @@ class Solution:
         n位所有的十进制数就是n个从0到9的全排列 -- 递归实现
         时间复杂度：O(n)
         空间复杂度：O()
-        :param n:
-        :return:
         """
         if n < 0:
             return

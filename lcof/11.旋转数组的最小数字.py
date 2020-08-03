@@ -22,8 +22,6 @@ class Solution:
         二分查找，每次缩小一半的范围，直到两个指针相邻
         时间复杂度：O(logn)
         空间复杂度：O(1)
-        :param numbers:
-        :return:
         """
         if not numbers:
             return

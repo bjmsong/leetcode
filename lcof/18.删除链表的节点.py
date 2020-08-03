@@ -1,10 +1,6 @@
 """
-Q: 删除链表的节点
 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
 返回删除后的链表的头节点。
-
-测试用例：
-
 """
 
 
@@ -19,9 +15,6 @@ class Solution:
         """
         遍历
         时间复杂度：O(n)
-        :param head:
-        :param val:
-        :return:
         """
         if not head:
             return head

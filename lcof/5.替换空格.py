@@ -9,6 +9,7 @@ Q：替换空格
 
 
 def replaceSpace(str):
+    # list.append()操作：平均O(1)时间复杂度
     result = []
     for s in str:
         if s == " ":
@@ -17,13 +18,13 @@ def replaceSpace(str):
             result.append(s)
     return "".join(result)
 
+# method2:
+# 从后到前添加元素
 
 # def replaceSpace1(str):
 #     """
 #     时间复杂度：O(n)
 #     空间复杂度：O(m),m是空格数量
-#     :param str:
-#     :return:
 #     """
 #     length = len(str)
 #     count = 0

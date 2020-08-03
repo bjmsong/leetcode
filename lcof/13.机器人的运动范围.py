@@ -11,6 +11,45 @@ Q: 机器人的运动范围
 """
 
 
+class Solution:
+    def movingCount(self, m, n, k):
+        """
+        bfs
+        """
+
+        def countValue(idx, jdx):
+            val = 0
+            while idx > 0:
+                val += idx % 10
+                idx //= 10
+            while jdx > 0:
+                val += jdx % 10
+                jdx //= 10
+
+            return val
+
+        def bfs(i, j):
+            if i < 0 or i >= m or j < 0 or j >= n or visited[i][j] == True or countValue(i, j) > k:
+                return False
+            visited[i][j] = True
+            return True
+
+        from collections import deque
+        q = deque()
+        q.append([0, 0])
+        cnt = 0
+        visited = [[False] * n for _ in range(m)]
+        while q:
+            i, j = q.popleft()
+            if bfs(i, j):
+                cnt += 1
+                q.append([i - 1, j])
+                q.append([i + 1, j])
+                q.append([i, j - 1])
+                q.append([i, j + 1])
+        return cnt
+
+
 # class Solution:
 #     def countNumber(self, m, n):
 #         cnt = 0
@@ -56,50 +95,6 @@ Q: 机器人的运动范围
 #                 cnt += 1
 #
 #         return cnt
-
-
-class Solution:
-    def movingCount(self, m, n, k):
-        """
-        bfs
-        :param m:
-        :param n:
-        :param k:
-        :return:
-        """
-
-        def countValue(idx, jdx):
-            val = 0
-            while idx > 0:
-                val += idx % 10
-                idx //= 10
-            while jdx > 0:
-                val += jdx % 10
-                jdx //= 10
-
-            return val
-
-        def bfs(i, j):
-            val = countValue(i, j)
-            if i < 0 or i >= m or j < 0 or j >= n or visited[i][j] == True or val > k:
-                return False
-            visited[i][j] = True
-            return True
-
-        from collections import deque
-        q = deque()
-        q.append([0, 0])
-        cnt = 0
-        visited = [[False] * n for _ in range(m)]
-        while q:
-            i, j = q.popleft()
-            if bfs(i, j):
-                cnt += 1
-                q.append([i - 1, j])
-                q.append([i + 1, j])
-                q.append([i, j - 1])
-                q.append([i, j + 1])
-        return cnt
 
 
 if __name__ == '__main__':

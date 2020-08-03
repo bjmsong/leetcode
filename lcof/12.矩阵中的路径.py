@@ -14,17 +14,15 @@ Q: 矩阵中的路径
 """
 
 
-
 class Solution:
 
     def exist(self, board, word):
         """
-        递归/DFS真香
+        DFS真香
         """
         if not board:
             return False
-        rows = len(board)
-        cols = len(board[0])
+        rows, cols = len(board), len(board[0])
         visited = [[False] * cols for _ in range(rows)]  # 是否在路径中
         for i in range(rows):
             for j in range(cols):
