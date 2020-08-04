@@ -15,8 +15,6 @@ class Solution:
         不使用额外空间
         用三个指针分别表示当前节点，前一个节点、后一个节点
         举例：1->2->4
-        :param head:
-        :return:
         """
         if not head or not head.next:
             return head

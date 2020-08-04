@@ -10,6 +10,23 @@ class ListNode:
 
 
 class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        head = ListNode(None)
+        pos = head
+        while l1 and l2:
+            if l1.val < l2.val:
+                pos.next = l1
+                l1 = l1.next
+            else:
+                pos.next = l2
+                l2 = l2.next
+            pos = pos.next
+        if l1:
+            pos.next = l1
+        if l2:
+            pos.next = l2
+        return head.next
+
     # def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
     #     """
     #     递归： 每次将指针指向较小的头节点，然后将剩余的链表合并
@@ -32,23 +49,6 @@ class Solution:
     #         pos.next = l2
     #         pos.next.next = self.mergeTwoLists(l1, l2.next)
     #     return head.next
-
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        head = ListNode(None)
-        pos = head
-        while l1 and l2:
-            if l1.val < l2.val:
-                pos.next = l1
-                l1 = l1.next
-            else:
-                pos.next = l2
-                l2 = l2.next
-            pos = pos.next
-        if l1:
-            pos.next = l1
-        if l2:
-            pos.next = l2
-        return head.next
 
 
 if __name__ == '__main__':
