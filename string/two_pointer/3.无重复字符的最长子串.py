@@ -27,7 +27,7 @@ class Solution:
         # 记录窗口内的元素
         d = set()
         d.add(s[0])
-        while left < length - 1 and right < length:
+        while left < length-1 and right < length:
             # 移动右指针
             while right < length:
                 if s[right] in d:
@@ -71,6 +71,7 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
+    assert (s.lengthOfLongestSubstring("abcdeagdbcf") == 7)
     assert (s.lengthOfLongestSubstring("abcabcbb") == 3)
     assert (s.lengthOfLongestSubstring("bbbbb") == 1)
     assert (s.lengthOfLongestSubstring("pwwkew") == 3)
