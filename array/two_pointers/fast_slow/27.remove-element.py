@@ -72,7 +72,7 @@ class Solution:
         时间复杂度：O(n)
         空间复杂度：O(1)
         """
-        left_index = 0   # 记录非val的值
+        left_index = 0   # 记录非val的值索引
         for i in range(len(nums)):
             if nums[i] != val:
                 nums[left_index] = nums[i]

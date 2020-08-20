@@ -46,9 +46,6 @@ class Solution:
         设右上角值为val，如果val<target,则可以排除val所在的行；如果val>target,则可以排除val所在的列
         直到遍历完矩阵
         时间复杂度：O(m+n)
-        :param matrix:
-        :param target:
-        :return:
         """
         if matrix == [] or matrix[0] == []:
             return False

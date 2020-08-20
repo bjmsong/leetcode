@@ -22,25 +22,22 @@ class Solution:
         - 慢指针前进，直到和小于s
         - 重复上面两步，直到快指针达到数组末尾 and 慢指针追上快指针
         时间复杂度：O(n)
-        :param s:
-        :param nums:
-        :return:
         """
         slow, fast = 0, 0
         sum = 0
         min_length = len(nums)
         length = 0
         while fast < len(nums) or slow < fast:
-            if sum < s and fast < len(nums):
+            if sum < s and fast < len(nums):  # 快指针前进
                 sum += nums[fast]
                 fast += 1
-            elif sum >= s:
+            elif sum >= s:                    # 和大于s，慢指针前进
                 length = fast - slow
                 if length < min_length:
                     min_length = length
                 sum -= nums[slow]
                 slow += 1
-            else:   # 右指针到头了
+            else:   # 快指针已达到数组末尾，慢指针前进
                 slow += 1
         if length == 0:
             return 0

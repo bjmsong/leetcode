@@ -41,11 +41,8 @@ class Solution:
         思路：
         时间复杂度： O(n^3+nlogn)
         空间复杂度：
-        :param nums:
-        :param target:
-        :return:
         """
-        solution = {}  # 字典的key可以保证解唯一 或者 集合
+        solution = {}  # 字典的key/集合可以保证解唯一
         nums.sort()
         length = len(nums)
         for i in range(length - 3):

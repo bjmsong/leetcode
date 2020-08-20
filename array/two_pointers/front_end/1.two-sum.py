@@ -55,9 +55,6 @@ class Solution:
         思路： 哈希表(value:index)
         时间复杂度：O(n)
         空间复杂度：O(n)
-        :param nums:
-        :param target:
-        :return:
         """
         dict = {}
         for i in range(len(nums)):

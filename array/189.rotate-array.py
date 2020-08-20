@@ -45,7 +45,7 @@
 #
 class Solution:
 
-    def rotate(self, nums: List[int], k: int) -> None:
+    def rotate(self, nums, k: int) -> None:
         """
         反转三次：前半段、后半段、整体
         空间复杂度：O(1)

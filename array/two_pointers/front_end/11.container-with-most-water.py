@@ -38,10 +38,8 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         """
-        思路： 每次移动短柱子，因为矩阵的面积取决于短柱子
+        思路：每次移动短柱子，因为矩阵的面积取决于短柱子
         时间复杂度：O(n)
-        :param height:
-        :return:
         """
         left = 0
         right = len(height) - 1

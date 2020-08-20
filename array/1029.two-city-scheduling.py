@@ -74,7 +74,10 @@ class Solution:
 
     #     return sum
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
-        # 按cost(A)-cost(B)顺序排序
+        """
+        按cost(A)-cost(B)顺序排序:
+        [[10,20],[30,200],[400,50],[30,20]] => [[30,200],[10,20],[30,20],[400,50]]
+        """
         costs.sort(key=lambda tup: tup[0]-tup[1])
         sum = 0
         n = len(costs)//2  # "/"得到的是float

@@ -11,8 +11,6 @@ class Solution:
     def findDiagonalOrder(self, matrix):
         """
         每一轮遍历一条对角线,直到碰到边界为止
-        :param matrix:
-        :return:
         """
         if not matrix or not matrix[0]:
             return []

@@ -19,6 +19,12 @@
 
 class Solution:
     def findMaxConsecutiveOnes(self, nums) -> int:
+        """
+        - 快指针找到1
+        - 慢指针指向第一个1
+        - 快指针继续前进，直到1的末尾
+        - 计算连续1的个数=fast-slow
+        """
         fast = 0
         length = 0
         while fast < len(nums):

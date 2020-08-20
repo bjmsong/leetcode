@@ -47,7 +47,7 @@ class Solution:
     #         if v > length // 2 : 
     #             return k 
 
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElement(self, nums) -> int:
         # 众数数量大于一半，那么排好序后中间的数一定是众数！
         nums.sort()
         return nums[len(nums)//2]

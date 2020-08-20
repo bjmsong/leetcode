@@ -32,7 +32,7 @@ class Solution:
     def __init__(self):
         self.result = []
 
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def inorderTraversal(self, root: TreeNode):
         if not root:
             return []
         self.inorderTraversal(root.left)

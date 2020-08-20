@@ -62,7 +62,7 @@ class Solution(object):
 
         # 确定行： 以每一行的第一个元素组成列表，找到最小的大于target的值
         left, right = 0, m - 1
-        while left <= right:  # 注意等号不要漏
+        while left <= right:  # 等号不要漏
             mid = (left + right) // 2
             if matrix[mid][0] == target:
                 return True

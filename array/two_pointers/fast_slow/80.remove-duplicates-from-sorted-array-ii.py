@@ -66,8 +66,6 @@ class Solution:
         最多允许重复k次问题:
         - 指针index标记符合条件的元素末尾
         - 遍历数组，每个元素和第index-(k-1)个元素比较,如果值相同，则继续遍历，如果值不同，则添加到符合条件的元素末尾
-        :param nums:
-        :return:
         """
         k = 2
         if len(nums) <= k:
