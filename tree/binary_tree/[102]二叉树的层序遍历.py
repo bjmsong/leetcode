@@ -32,7 +32,10 @@ class TreeNode:
 
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def levelOrder(self, root: TreeNode):
+        """
+        每一层节点依次加入队列中，逐层遍历
+        """
         from collections import deque
         q = deque()
         result = []
