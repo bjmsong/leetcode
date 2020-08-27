@@ -17,7 +17,6 @@ class Solution:
                     i += 1
                 stack.pop()
 
-
         return "".join(stack)
 
     # def delete_continues(self, s):
