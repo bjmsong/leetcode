@@ -55,13 +55,11 @@ class Solution:
     - 节点值是距离目标值的残差（residuals）
     - 相邻节点该节点之后的每个元素
     """
-
     def combinationSum(self, candidates, target):
         """
         DFS:比bfs快
         终止条件是遍历完所有的情况
         """
-
         def dfs(temp, residuals, index):
             """
             :param index: 记录当前索引，只遍历>=该索引的数
